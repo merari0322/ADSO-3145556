@@ -1,0 +1,37 @@
+<mxfile host="65bd71144e">
+    <diagram name="SenaMarket Modelo Relacional" id="0">
+        <mxGraphModel dx="702" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Usuario&#xa;----------------&#xa;IdUsuario (PK)&#xa;Nombre&#xa;Correo&#xa;Rol" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="50" width="200" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Categoria&#xa;----------------&#xa;IdCategoria (PK)&#xa;NombreCategoria" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="50" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Producto&#xa;----------------&#xa;IdProducto (PK)&#xa;NombreProducto&#xa;Descripcion&#xa;Precio&#xa;IdCategoria (FK)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="250" width="220" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Pedido&#xa;----------------&#xa;IdPedido (PK)&#xa;Fecha&#xa;Total&#xa;IdUsuario (FK)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="260" width="200" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="DetallePedido&#xa;----------------&#xa;IdDetalle (PK)&#xa;IdPedido (FK)&#xa;IdProducto (FK)&#xa;Cantidad&#xa;Subtotal" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="450" width="240" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" style="endArrow=block;html=1;" parent="1" source="2" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" style="endArrow=block;html=1;" parent="1" source="3" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" style="endArrow=block;html=1;" parent="1" source="5" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" style="endArrow=block;html=1;" parent="1" source="4" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
